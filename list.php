@@ -1,4 +1,4 @@
-﻿﻿<?php
+﻿﻿﻿<?php
 $limit = 5; 
 require_once("functions.php");
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -110,13 +110,13 @@ $data = [];
 
             for ($x=1; $x <= $pagination ; $x++) { 
 
-                if ($x == $current_page){
-                    echo '<span>'.$x.'</span> | ';
+                if ($x == $page ){
+                    echo '<span class="current" >'.$x.'</span>  ';
                 }
                 else{
                     echo ' '; 
 
-                    echo '<a href=?page='. $x. '&name='. $name.'>'. $x. '</a>'; 
+                    echo '<a class="orther-page" href=?page='. $x. '&name='. $name.'>'. $x. '</a>'; 
          
                     echo ' '; 
 
